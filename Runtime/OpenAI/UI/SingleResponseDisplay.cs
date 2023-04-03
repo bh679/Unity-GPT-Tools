@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using BrennanHatton.UnityTools;
 
-namespace BrennanHatton.AI
+namespace BrennanHatton.GPT
 {
 	
 	public class SingleResponseDisplay : MonoBehaviour

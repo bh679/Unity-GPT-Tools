@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-namespace BrennanHatton.AI
+namespace BrennanHatton.GPT
 {
 	/// <summary>
 	/// strings and text files for prompts to wrap data

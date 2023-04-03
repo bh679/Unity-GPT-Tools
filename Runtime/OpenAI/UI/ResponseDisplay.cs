@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BrennanHatton.UnityTools;
 
-namespace BrennanHatton.AI
+namespace BrennanHatton.GPT
 {
 		
 	public class ResponseDisplay : MonoBehaviour

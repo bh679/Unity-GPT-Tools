@@ -4,7 +4,7 @@ Modified by Brennan Hatton
 Originally from https://github.com/unitycoder/UnityOpenAIGPT3
 MIT License
 */
-namespace BrennanHatton.AI
+namespace BrennanHatton.GPT
 {
     [System.Serializable]
     public class RequestData

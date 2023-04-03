@@ -13,7 +13,7 @@ using UnityEngine.Events;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-namespace BrennanHatton.AI
+namespace BrennanHatton.GPT
 {
 	public class InteractionData
 	{

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-namespace BrennanHatton.AI
+namespace BrennanHatton.GPT
 {
 
 	[System.Serializable]

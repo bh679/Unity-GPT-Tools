@@ -1,9 +1,10 @@
 {
-    "name": "BrennanHattonUnityTools",
-    "rootNamespace": "BrennanHatton.UnityTools",
+    "name": "GPT Tools",
+    "rootNamespace": "BrennanHatton.GPT",
     "references": [
         "Unity.TextMeshPro",
-        "Unity.InputSystem"
+        "Unity.InputSystem",
+        "BrennanHattonUnityTools"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
