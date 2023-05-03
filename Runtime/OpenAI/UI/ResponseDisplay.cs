@@ -1,7 +1,6 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using BrennanHatton.UnityTools;
 
 namespace BrennanHatton.GPT
 {
@@ -16,18 +15,20 @@ namespace BrennanHatton.GPT
 		public bool includePrompt;
 		RectTransform rect;
 		
+		public bool showHistory;
+		
 		void Reset()
 		{
 			gpt3 = FindObjectOfType<GPT3>();
 			responseParent = this.transform;
 		}
 		
-	    // Start is called before the first frame update
-	    void Start()
-	    {
-		    gpt3.onResults.AddListener(AddResponse);
-		    rect = (RectTransform)this.transform;
-	    }
+		// Start is called before the first frame update
+		void Start()
+		{
+			gpt3.onResults.AddListener(AddResponse);
+			rect = (RectTransform)this.transform;
+		}
 	    
 		public void AddResponse(InteractionData data)
 		{
@@ -37,21 +38,29 @@ namespace BrennanHatton.GPT
 			response.gameObject.SetActive(true);
 			response.SetResponse(data, includePrompt);
 			
-			//move all down
-			for(int i = 0; i < responses.Count; i++)
+			if(showHistory)
 			{
-				responses[i].gameObject.SetActive(true);
-				responses[i].transform.position = responses[i].transform.position + Vector3.down*response.Height;
-				
-				//Debug.Log(i+": "+Mathf.Abs(responses[i].transform.position.y) + " > " + rect.GetHeight());
-				//Debug.Log(responses[i].transform.position.y );
-				
-				if(responses[i].transform.position.y < 0)
+				//move all down
+				for(int i = 0; i < responses.Count; i++)
 				{
-					responses[i].gameObject.SetActive(false);
+					responses[i].gameObject.SetActive(true);
+					responses[i].transform.position = responses[i].transform.position + Vector3.down*response.Height;
 					
-					//i = responses.Count;
+					//Debug.Log(i+": "+Mathf.Abs(responses[i].transform.position.y) + " > " + rect.GetHeight());
+					//Debug.Log(responses[i].transform.position.y );
+					
+					if(responses[i].transform.position.y < 0)
+					{
+						responses[i].gameObject.SetActive(false);
+						
+						//i = responses.Count;
+					}
 				}
+			}
+			else
+			{
+				if(responses.Count > 0)
+					responses[responses.Count -1 ].gameObject.SetActive(false);
 			}
 			
 			
