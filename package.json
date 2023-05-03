@@ -1,11 +1,11 @@
 {
-	"name": "com.brennanhatton.unitytools",
+	"name": "com.brennanhatton.GPT",
 	"description": "Generic tools of things I frequently use in Unity.",
 	"version": "1.5.3",
 	"unity": "2021.3",
   	"unityRelease": "16f1",
-	"displayName": "Brennan Hattons Unity Tools",
-  	"documentationUrl": "https://github.com/bh679/Unity-Tools",
+	"displayName": "Brennan Hattons GPT Tools",
+  	"documentationUrl": "https://github.com/bh679/Unity-GPT-Tools",
   	"licensesUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
 	"author": 
 	{
@@ -21,7 +21,12 @@
 	[
 		"Brennan",
 		"Hatton",
-		"Brennan Hatton"
+		"Brennan Hatton",
+		"GPT",
+		"AI
+		"ChatGPT",
+		"GPT3",
+		"GPT4"
 	 ],
 	"hideInEditor": false
 }
