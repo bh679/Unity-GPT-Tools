@@ -33,13 +33,13 @@ To install this project as a dependency using the Unity Package Manager,
 Install requirements above.<br >
 Windows -> Package Manager -> '+' -> `add package from git URL...` ->
 ```
-https://github.com/bh679/Unity-Tools.git
+https://github.com/bh679/Unity-GPT-Tools.git
 ```
 or 
 add the following line to your project's `manifest.json`:
 
 ```
-"com.brennanhatton.untiytools": "git+https://github.com/bh679/Unity-Tools.git"
+"com.brennanhatton.untiytools": "git+https://github.com/bh679/Unity-GPT-Tools.git"
 ```
 
 
