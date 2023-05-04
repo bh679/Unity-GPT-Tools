@@ -1,7 +1,7 @@
 {
 	"name": "com.brennanhatton.gpt",
 	"description": "GPT Tools for Unity",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"unity": "2021.3",
   	"unityRelease": "16f1",
 	"displayName": "Brennan Hattons GPT Tools",
