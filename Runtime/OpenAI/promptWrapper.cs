@@ -15,11 +15,14 @@ namespace BrennanHatton.GPT
 		[Tooltip("prePompt + data + postPromp")]
 		public string prePrompt, postPrompt;
 		
-		[Tooltip("prePromptText + prePompt + data + postPromp + postPromptText")]
+		[Tooltip("prePompt2 + prePompt + data + postPromp + postPromp2")]
+		public string[] prePrompt2, postPrompt2;
+		
+		[Tooltip("prePromptText + prePompt2 + prePompt + data + postPromp + postPromp2 + postPromptText")]
 		public TextAsset[] prePromptText, postPromptText;
 		
 	
-		[Tooltip("preInput + prePromptText + prePompt + data + postPromp + postPromptText + postInput")]
+		[Tooltip("preInput + prePromptText + prePompt2 + prePompt + data + postPromp + postPromp2 + postPromptText + postInput")]
 		public TMP_InputField[] preInput, postInput;
 		
 		string prompt;
@@ -35,7 +38,13 @@ namespace BrennanHatton.GPT
 			for(int i = 0; i < prePromptText.Length; i++)
 				prompt += prePromptText[i].text;
 			
-			prompt += prePrompt + _prompt + postPrompt;
+			for(int i = 0; i < prePrompt2.Length; i++)
+				prompt += prePrompt2[i];
+			
+			prompt +=  prePrompt + _prompt + postPrompt;
+			
+			for(int i = 0; i < postPrompt2.Length; i++)
+				prompt += postPrompt2[i];
 			
 			for(int i = 0; i < prePromptText.Length; i++)
 				prompt += postPromptText[i].text;
