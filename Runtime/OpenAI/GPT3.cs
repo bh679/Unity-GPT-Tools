@@ -22,7 +22,7 @@ namespace BrennanHatton.GPT
 		public string GeneratedText
 		{
 			get{
-			return generatedText;
+				return generatedText;
 			}
 		}
 		public string generatedText;
@@ -39,6 +39,26 @@ namespace BrennanHatton.GPT
 			responseData = _result;
 			generatedText = responseData.choices[0].text.TrimStart('\n').TrimStart('\n');
 			processing = false;
+		}
+		
+		public void SetResponse(string _generatedText)
+		{
+			generatedText = _generatedText;//responseData.choices[0].text.TrimStart('\n').TrimStart('\n');
+			processing = false;
+		}
+		
+		public static InteractionData MostRecentInteraction(List<InteractionData> interactions, bool includeProcessing = false)
+		{
+			if(includeProcessing || !interactions[interactions.Count-1].processing)
+				return interactions[interactions.Count-1];
+			
+			for(int i = interactions.Count ;i <= 0; i--)
+			{
+				if(!interactions[i].processing)
+					return interactions[i];
+			}
+			
+			return null;
 		}
 	}
 
